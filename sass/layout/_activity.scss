@@ -1,4 +1,12 @@
-.activity {
+@media screen and (min-width: 0px) and (max-width: 1199px) {
+  .activity {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+
+  .activity {
   padding-top: 47px;
   padding-bottom: 94px;
 }
@@ -37,5 +45,5 @@
   font-weight: 700;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-
+}
 }
