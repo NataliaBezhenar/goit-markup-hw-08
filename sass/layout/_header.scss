@@ -1,26 +1,65 @@
 .header {
+  padding-top: 16px;
+  padding-bottom: 16px;
   border-bottom: 1px solid #ececec;
-  padding-top: 24px;
-  padding-bottom: 25px;
 
-  .container {
+    .container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+  } 
+}
+@media screen and (max-width: 767px) {
+
+.header {
+
+  &__mobile-menu-btn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
   }
+
+  &__mobile-menu-icon {
+    width: 40px;
+    height: 40px;
+    fill: var(--primary-text-color);
+  }
+}
+
+.site-nav__main,
+.auth-list  {
+  display: none;
+}
+
+
+}
+
+
+@media screen and (min-width: 768px) {
+.header {
+  &__mobile-menu-btn {
+    display: none;
+  }
+}
+}
+
+@media screen and (min-width: 768px) {
+.header {
+  padding-top: 21px;
+  padding-bottom: 21px;
 }
 
 .site-nav {
   display: flex;
 }
-
-.site-nav__main,
-.auth-list {
+.site-nav__main{
   display: flex;
   align-items: center;
+  margin-right: 84px;
 }
 
-.site-nav__link,
-.auth-list__link {
+.site-nav__link {
   font-size: 14px;
   font-weight: 500;
   transition: color var(--transition-duration) var(--transition-timing-func);
@@ -36,7 +75,6 @@
       opacity: 1;
     }
   }
-
   &::after {
     opacity: 0;
     content: "";
@@ -48,12 +86,15 @@
     height: 4px;
     background-color: var(--accent-color);
     border-radius: 2px;
-    margin-top: 45px;
+    margin-top: 48px;
   }
 }
 
 .auth-list__link {
   color: var(--grey-text-color);
+  font-size: 12px;
+  font-weight: 500;
+  transition: color var(--transition-duration) var(--transition-timing-func);
   &:hover,
   &:focus {
     color: var(--accent-color);
@@ -71,8 +112,7 @@
   }
 }
 
-.site-nav__item,
-.auth-list__item {
+.site-nav__item {
   &:not(:last-child) {
     margin-right: 50px;
   }
@@ -82,3 +122,39 @@
   margin-right: 10px;
   fill: currentColor;
 }
+ .icon-mail{
+   width: 14px;
+   height: 12px;
+ }
+
+ .icon-tel {
+   width: 10px;
+   height: 14px;
+ }
+.auth-list__item {
+  margin-bottom: 10px;
+}
+}
+
+
+@media screen and (min-width: 1200px){
+  .header {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+
+  .auth-list {
+      display: flex;
+      align-items: center;
+
+    }
+
+    .auth-list__item {
+      margin-bottom: 0;
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+  
+  }
+
