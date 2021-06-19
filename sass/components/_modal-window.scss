@@ -3,8 +3,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
   padding: 40px;
   background-color: var(--primary-white-color);
   border-radius: 4px;
@@ -25,8 +25,6 @@
 
 .modal__close-btn {
   position: absolute;
-  // top: 0;
-  // right: 0;
   width: 30px;
   height: 30px;
   right: 8px;
@@ -50,3 +48,15 @@
     fill: var(--accent-color);
   }
 }
+
+ @media screen and (min-width: 1200px) {
+   .modal {
+     width: 528px;
+     height: 581px;
+
+     &__text-policy {
+       font-size: 14px;
+     }
+   }
+   
+ }
