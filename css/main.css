@@ -682,7 +682,7 @@ body {
   background-color: var(--hero-background-color);
   padding-top: 118px;
   padding-bottom: 118px;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/hero/hero_mob-img_1x.jpg");
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero_mob-img_1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
