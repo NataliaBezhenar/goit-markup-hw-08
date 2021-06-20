@@ -453,6 +453,7 @@ body {
     height: 100vh;
     background-color: var(--primary-white-color);
     overflow: auto;
+    z-index: 10;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -998,16 +999,19 @@ body {
 }
 
 .portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .filter {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: -15px;
+  margin-right: -8px;
 }
 
-.filter__item:not(:last-child) {
+.filter__item {
+  margin-bottom: 15px;
   margin-right: 8px;
 }
 
@@ -1016,6 +1020,7 @@ body {
   flex-wrap: wrap;
   margin-top: 20px;
   margin-left: -30px;
+  justify-content: center;
 }
 
 .card__item {

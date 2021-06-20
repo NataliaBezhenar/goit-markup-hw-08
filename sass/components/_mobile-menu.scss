@@ -7,7 +7,7 @@
     height: 100vh;
     background-color: var(--primary-white-color);
     overflow: auto;
-
+    z-index: 10;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;

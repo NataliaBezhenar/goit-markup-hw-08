@@ -24,10 +24,14 @@
     <header class="header">
       <div class="container">
         <nav class="site-nav">
-          <a class="logo header__logo link" href="./index.html"><span class="logo__span">Web</span>Studio</a>
+          <a class="logo header__logo link" href="./index.html"
+            ><span class="logo__span">Web</span>Studio</a
+          >
           <ul class="site-nav__main list">
             <li class="site-nav__item">
-              <a class="site-nav__link link" href="./index.html">Студия</a>
+              <a class="site-nav__link link" href="./index.html"
+                >Студия</a
+              >
             </li>
             <li class="site-nav__item">
               <a class="site-nav__link link current" href="./portfolio.html"
@@ -39,10 +43,15 @@
             </li>
           </ul>
         </nav>
+        <button type="button" class="header__mobile-menu-btn" data-menu-button>
+          <svg class="header__mobile-menu-icon">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
         <ul class="auth-list list">
           <li class="auth-list__item">
             <a class="auth-list__link link" href="mailto:info@devstudio.com">
-              <svg class="auth-list__icon" width="16" height="12">
+              <svg class="auth-list__icon icon-mail" width="16" height="12">
                 <use href="./images/icons.svg#icon-envelope"></use>
               </svg>
               info@devstudio.com</a
@@ -50,13 +59,62 @@
           </li>
           <li class="auth-list__item">
             <a class="auth-list__link link" href="tel:+380961111111">
-              <svg class="auth-list__icon" width="10" height="16">
+              <svg class="auth-list__icon icon-tel" width="10" height="16">
                 <use href="./images/icons.svg#icon-smartphone"></use>
               </svg>
               +38 096 111 11 11</a
             >
           </li>
         </ul>
+      </div>
+
+      <div class="mobile-menu" data-menu>
+        <div class="mobile-menu__container">
+          <button type="button" class="mobile-menu__close-btn" data-menu-close>
+            <svg class="mobile-menu__close-icon" width="11" height="11">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <ul class="mobile-menu__nav list">
+            <li class="mobile-menu__item">
+              <a href="./index.html" class="mobile-menu__link link">Студия</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="./portfolio.html" class="mobile-menu__link link">Портфолио</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="#" class="mobile-menu__link link">Контакты</a>
+            </li>
+          </ul>
+          <ul class="mobile-menu__contacts list">
+            <li class="mobile-menu__item">
+              <a href="tel:+380961111111" class="mobile-menu__tel-link link"
+                >+38 096 111 11 11</a
+              >
+            </li>
+            <li class="mobile-menu__item">
+              <a
+                href="mailto:info@devstudio.com"
+                class="mobile-menu__mail-link link"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile-menu__social-list list">
+            <li class="mobile-menu__soc-item">
+              <a href="#" class="mobile-menu__social-link link">Instagram</a>
+            </li>
+            <li class="mobile-menu__soc-item">
+              <a href="#" class="mobile-menu__social-link link">Twitter</a>
+            </li>
+            <li class="mobile-menu__soc-item">
+              <a href="#" class="mobile-menu__social-link link">Facebook</a>
+            </li>
+            <li class="mobile-menu__soc-item">
+              <a href="#" class="mobile-menu__social-link link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -325,9 +383,7 @@
             <p class="address__location">г. Киев, пр-т Леси Украинки, 26</p>
             <ul class="address__list list">
               <li class="address__item">
-                <a
-                  class="address__link link"
-                  href="mailto:info@example.com"
+                <a class="address__link link" href="mailto:info@example.com"
                   >info@example.com</a
                 >
               </li>
@@ -371,11 +427,10 @@
               </li>
             </ul>
           </div>
-          <form class="sign-up footer__sign-up">
-            <label
-              class="sign-up__label footer__title"
-              for="footer-input"
-            >
+        </div>
+        <form class="sign-up footer__sign-up">
+          <div class="sign-up__email-wrapper">
+            <label class="sign-up__label footer__title" for="footer-input">
               Подпишитесь на рассылку</label
             >
             <input
@@ -385,10 +440,11 @@
               name="user-email"
               placeholder="E-mail"
             />
-            <button class="button button__footer">Подписаться</button>
-          </form>
-        </div>
+          </div>
+          <button class="button button__footer">Подписаться</button>
+        </form>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
