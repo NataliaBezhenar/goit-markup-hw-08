@@ -23,7 +23,7 @@
 }
 
 .card__item {
-  width: 370px;
+  width: 450px;
   margin-top: 30px;
   margin-left: 30px;
   flex-basis: calc(100% - 90px) / 3;
@@ -86,5 +86,37 @@
   .card__link:hover &,
   .card__link:focus & {
     transform: translateY(0);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .filter {
+    justify-content: center;
+  }
+  .card {
+    justify-content: flex-start;
+  }
+  .card__item {
+    width: 354px;
+    height: 440px;
+  }
+
+  .card__signature {
+    height: 142px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  .card__item {
+    width: 370px;
+    height: 404px;
+  }
+  .card__signature {
+    height: 110px;
   }
 }
