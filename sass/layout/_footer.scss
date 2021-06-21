@@ -41,6 +41,8 @@
 
 .sign-up__email {
   height: 50px;
+  width: 100%;
+  max-width: 450px;
   background-color: var(--hero-background-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -56,16 +58,13 @@
   }
 }
 
+.sign-up__email-wrapper {
+  align-items: center;
+}
+
 @media screen and (max-width: 767px) {
   .address {
     text-align: center;
-  }
-
-  .address-and-social {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 
   .footer {
@@ -75,6 +74,7 @@
     &__social-icons,
     &__sign-up {
       text-align: center;
+      margin-top: 60px;
     }
   }
 
@@ -82,13 +82,10 @@
     &__email-wrapper {
       display: flex;
       flex-direction: column;
-      margin-top: 60px;
-      width: 100%;
     }
     &__label {
       display: block;
       margin-bottom: 20px;
-      text-align: center;
     }
   }
 }
@@ -109,6 +106,9 @@
     &__address {
       margin-right: 165px;
     }
+    &__sign-up {
+      margin-top: 60px;
+    }
   }
 
   .sign-up {
@@ -122,7 +122,6 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-top: 60px;
     }
   }
 }

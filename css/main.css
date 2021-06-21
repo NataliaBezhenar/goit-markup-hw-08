@@ -86,7 +86,7 @@ body {
 
 @media screen and (min-width: 480px) {
   .container {
-    min-width: 480px;
+    width: 480px;
     margin: 0 auto;
   }
 }
@@ -630,6 +630,18 @@ body {
     border-radius: 2px;
     margin-top: 48px;
   }
+  .auth-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: -30px;
+    margin-top: -10px;
+  }
+  .auth-list__item {
+    margin-left: 30px;
+    margin-top: 10px;
+  }
   .auth-list__link {
     color: var(--grey-text-color);
     font-size: 12px;
@@ -638,10 +650,6 @@ body {
   }
   .auth-list__link:hover, .auth-list__link:focus {
     color: var(--accent-color);
-  }
-  .auth-list .auth-list__link {
-    display: flex;
-    align-items: center;
   }
   .current {
     color: var(--accent-color);
@@ -664,9 +672,6 @@ body {
     width: 10px;
     height: 14px;
   }
-  .auth-list__item {
-    margin-bottom: 10px;
-  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -675,14 +680,7 @@ body {
     padding-bottom: 25px;
   }
   .auth-list {
-    display: flex;
-    align-items: center;
-  }
-  .auth-list__item {
-    margin-bottom: 0;
-  }
-  .auth-list__item:not(:last-child) {
-    margin-right: 50px;
+    flex-direction: row;
   }
 }
 
@@ -754,14 +752,18 @@ body {
   padding-bottom: 60px;
 }
 
-.features__item {
-  width: 100vw;
-  max-width: 100%;
-}
-
 .features__list {
   display: flex;
   flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+  justify-content: center;
+}
+
+.features__item {
+  margin-left: 30px;
+  margin-top: 30px;
+  flex-basis: calc((100% - 0px));
 }
 
 .features__thumb {
@@ -791,23 +793,9 @@ body {
   letter-spacing: 0.03em;
 }
 
-@media screen and (max-width: 767px) {
-  .features__item:not(:first-child) {
-    margin-top: 30px;
-  }
-}
-
 @media screen and (min-width: 768px) {
-  .features {
-    padding-bottom: 30px;
-  }
-  .features__list {
-    justify-content: space-between;
-  }
   .features__item {
-    width: 354px;
-    margin-top: 0;
-    margin-bottom: 30px;
+    flex-basis: calc((100% - 60px) / 2);
   }
   .features__title {
     text-align: left;
@@ -820,10 +808,7 @@ body {
     padding-bottom: 47px;
   }
   .features__item {
-    width: 270px;
-  }
-  .features__item:not(:last-child) {
-    margin-right: 30px;
+    flex-basis: calc((100% - 120px) / 4);
   }
   .features__title {
     text-align: left;
@@ -1006,28 +991,29 @@ body {
 .filter {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: -15px;
-  margin-right: -8px;
+  width: 480px;
+  margin-left: -8px;
+  margin-top: -15px;
+  margin-bottom: 50px;
 }
 
 .filter__item {
-  margin-bottom: 15px;
-  margin-right: 8px;
+  margin-left: 8px;
+  margin-top: 15px;
 }
 
 .card {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 20px;
+  margin-top: -30px;
   margin-left: -30px;
   justify-content: center;
 }
 
 .card__item {
-  width: 450px;
   margin-top: 30px;
   margin-left: 30px;
-  flex-basis: calc(100% - 90px)/3;
+  flex-basis: calc((100% - 90px) / 3);
 }
 
 .card__name {
@@ -1090,14 +1076,11 @@ body {
 
 @media screen and (min-width: 768px) {
   .filter {
+    width: 768px;
     justify-content: center;
   }
   .card {
     justify-content: flex-start;
-  }
-  .card__item {
-    width: 354px;
-    height: 440px;
   }
   .card__signature {
     height: 142px;
@@ -1109,9 +1092,8 @@ body {
     padding-top: 94px;
     padding-bottom: 94px;
   }
-  .card__item {
-    width: 370px;
-    height: 404px;
+  .filter {
+    width: 1200px;
   }
   .card__signature {
     height: 110px;
@@ -1162,6 +1144,8 @@ body {
 
 .sign-up__email {
   height: 50px;
+  width: 100%;
+  max-width: 450px;
   background-color: var(--hero-background-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -1178,32 +1162,28 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
+.sign-up__email-wrapper {
+  align-items: center;
+}
+
 @media screen and (max-width: 767px) {
   .address {
     text-align: center;
-  }
-  .address-and-social {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
   .footer__address {
     margin-bottom: 60px;
   }
   .footer__social-icons, .footer__sign-up {
     text-align: center;
+    margin-top: 60px;
   }
   .sign-up__email-wrapper {
     display: flex;
     flex-direction: column;
-    margin-top: 60px;
-    width: 100%;
   }
   .sign-up__label {
     display: block;
     margin-bottom: 20px;
-    text-align: center;
   }
 }
 
@@ -1222,6 +1202,9 @@ body {
   .footer__address {
     margin-right: 165px;
   }
+  .footer__sign-up {
+    margin-top: 60px;
+  }
   .sign-up {
     display: flex;
     flex-direction: column;
@@ -1234,7 +1217,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 60px;
   }
 }
 

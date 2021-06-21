@@ -6,27 +6,28 @@
 .filter {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom:  -15px;
-  margin-right: -8px;
+  width: 480px;
+  margin-left: -8px;
+  margin-top: -15px;
+  margin-bottom: 50px;
 }
  .filter__item {
-   margin-bottom: 15px;
-   margin-right: 8px;
+  margin-left: 8px;
+  margin-top: 15px;
  }
  
 .card {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 20px;
+  margin-top: -30px;
   margin-left: -30px;
   justify-content: center;
 }
 
 .card__item {
-  width: 450px;
   margin-top: 30px;
   margin-left: 30px;
-  flex-basis: calc(100% - 90px) / 3;
+  flex-basis: calc((100% - 90px) / 3);
 }
 
 .card__name {
@@ -42,8 +43,6 @@
   color: var(--grey-text-color);
   letter-spacing: 0.03em;
 }
-
-
 
 .card__signature {
   border: 1px solid #eeeeee;
@@ -91,14 +90,11 @@
 
 @media screen and (min-width: 768px) {
   .filter {
+    width: 768px;
     justify-content: center;
   }
   .card {
     justify-content: flex-start;
-  }
-  .card__item {
-    width: 354px;
-    height: 440px;
   }
 
   .card__signature {
@@ -111,11 +107,10 @@
     padding-top: 94px;
     padding-bottom: 94px;
   }
+.filter {
+  width: 1200px;
+}
 
-  .card__item {
-    width: 370px;
-    height: 404px;
-  }
   .card__signature {
     height: 110px;
   }
